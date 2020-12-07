@@ -14,6 +14,7 @@ namespace EntityFrameworkApp
             using (ETradeContext context = new ETradeContext())
             {
                 return  context.Products.ToList();
+
             }
         }
 
