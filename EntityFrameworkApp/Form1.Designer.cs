@@ -47,6 +47,9 @@
             this.lblNameUpdate = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgwProducts = new System.Windows.Forms.DataGridView();
+            this.tbxSearch = new System.Windows.Forms.TextBox();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.btnIdAra = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProducts)).BeginInit();
@@ -222,11 +225,42 @@
             this.dgwProducts.TabIndex = 8;
             this.dgwProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwProducts_CellClick);
             // 
+            // tbxSearch
+            // 
+            this.tbxSearch.Location = new System.Drawing.Point(538, 23);
+            this.tbxSearch.Name = "tbxSearch";
+            this.tbxSearch.Size = new System.Drawing.Size(100, 20);
+            this.tbxSearch.TabIndex = 12;
+            this.tbxSearch.TextChanged += new System.EventHandler(this.tbxSearch_TextChanged);
+            // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Location = new System.Drawing.Point(491, 26);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(41, 13);
+            this.lblSearch.TabIndex = 13;
+            this.lblSearch.Text = "Search";
+            // 
+            // btnIdAra
+            // 
+            this.btnIdAra.Location = new System.Drawing.Point(12, 400);
+            this.btnIdAra.Name = "btnIdAra";
+            this.btnIdAra.Size = new System.Drawing.Size(47, 26);
+            this.btnIdAra.TabIndex = 14;
+            this.btnIdAra.Text = "Id Ara";
+            this.btnIdAra.UseVisualStyleBackColor = true;
+            this.btnIdAra.Visible = false;
+            this.btnIdAra.Click += new System.EventHandler(this.btnIdAra_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(895, 423);
+            this.ClientSize = new System.Drawing.Size(895, 427);
+            this.Controls.Add(this.btnIdAra);
+            this.Controls.Add(this.lblSearch);
+            this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -241,6 +275,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProducts)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -264,6 +299,9 @@
         private System.Windows.Forms.Label lblNameUpdate;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgwProducts;
+        private System.Windows.Forms.TextBox tbxSearch;
+        private System.Windows.Forms.Label lblSearch;
+        private System.Windows.Forms.Button btnIdAra;
     }
 }
 

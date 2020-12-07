@@ -26,7 +26,15 @@ namespace EntityFrameworkApp
         {
             dgwProducts.DataSource = _productDal.GetAll();
         }
+        private void SearchProducts(string key)
+        {
+            //koleyksyona yazma
+            //dgwProducts.DataSource = _productDal.GetAll().Where(p => p.Name.ToLower().Contains(key.ToLower())).ToList();
 
+            //veritabanına yazma
+            dgwProducts.DataSource = _productDal.GetByName(key);
+            //dgwProducts.DataSource = _productDal.GetByUnitPrice(key);
+        }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Product product = new Product
@@ -70,6 +78,17 @@ namespace EntityFrameworkApp
             LoadProducts();
             MessageBox.Show("Deleted!");
 
+        }
+
+        private void tbxSearch_TextChanged(object sender, EventArgs e)
+        {
+           SearchProducts(tbxSearch.Text);
+        }
+
+        private void btnIdAra_Click(object sender, EventArgs e)
+        {
+           // dgwProducts.DataSource=_productDal.GetById(21);
+           
         }
     }
 }
