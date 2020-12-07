@@ -82,7 +82,7 @@ namespace EntityFrameworkApp
 
         private void tbxSearch_TextChanged(object sender, EventArgs e)
         {
-           SearchProducts(tbxSearch.Text);
+           SearchProducts(tbxSearch.Text );
         }
 
         private void btnIdAra_Click(object sender, EventArgs e)
